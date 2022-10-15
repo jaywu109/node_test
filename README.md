@@ -70,7 +70,6 @@ EXPOSE 3000  # should be the same as the port in the app.js
 
 /app.js
 const PORT = process.env.PORT || 3000 // shoud set this same as the one in docker image
-
 ```
 
 References:
@@ -78,3 +77,4 @@ References:
 1. https://ithelp.ithome.com.tw/articles/10244413
 2. https://medium.com/@vinhle95/deploy-a-containerised-node-js-application-to-cloud-run-80d2da6b7040
 3. https://ithelp.ithome.com.tw/articles/10248834
+4. https://hub.docker.com/_/node
