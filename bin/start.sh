@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 
-nodemon app.js
+nodemon ../app.js

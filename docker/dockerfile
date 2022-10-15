@@ -8,10 +8,11 @@ RUN apt-get update -y \
     && rm -rf /var/lib/apt/li 
 
 RUN npm install -g nodemon \
-    && git clone https://github.com/jaywu109/node_test.git \
-    && cd node_test && npm install 
+    && git clone https://github.com/jaywu109/node_test.git /node_test
 
 WORKDIR /node_test
+
+RUN  npm install 
 
 EXPOSE 8080
 ENTRYPOINT ["/bin/bash", "start.sh"]
