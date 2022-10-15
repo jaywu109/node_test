@@ -3,7 +3,7 @@ const morgan = require('morgan');
 
 // express app
 const app = express();
-const PORT = process.env.PORT || 3000 // shoud set this same as the one in docker image
+const PORT = process.env.PORT || 3000 // shoud set this same as the one in dockerfile
 
 // listen for requests
 app.listen(PORT, () => {
