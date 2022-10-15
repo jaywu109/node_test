@@ -8,5 +8,10 @@ RUN apt-get update -y \
     && rm -rf /var/lib/apt/li 
 
 RUN npm install -g nodemon \
-    && git clone https://github.com/iamshaunjp/node-crash-course.git \
-    && cd node-crash-course && npm install 
+    && git clone https://github.com/jaywu109/node_test.git \
+    && cd node_test && npm install 
+
+WORKDIR /node_test
+
+EXPOSE 8080
+ENTRYPOINT ["/bin/bash", "start.sh"]
