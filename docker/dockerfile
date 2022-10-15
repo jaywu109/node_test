@@ -1,0 +1,12 @@
+FROM node:16.17.1
+
+RUN apt-get update -y \
+    && apt-get install -y \
+    vim curl wget zip htop\
+    && apt-get autoremove -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/li 
+
+RUN npm install -g nodemon \
+    && git clone https://github.com/iamshaunjp/node-crash-course.git \
+    && cd node-crash-course && npm install 
