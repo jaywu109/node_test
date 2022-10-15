@@ -1,5 +1,6 @@
 FROM node:16.17.1
 
+### Install Linux dependencies
 RUN apt-get update -y \
     && apt-get install -y \
     vim curl wget zip htop\
@@ -8,12 +9,15 @@ RUN apt-get update -y \
     && rm -rf /var/lib/apt/li 
 
 RUN npm install -g nodemon
-ARG CACHEBUST=1
+
+# Prevent to use cache with deprecated code in repo
+ARG CACHEBUST=1 
 RUN git clone https://github.com/jaywu109/node_test.git /node_test
 
 WORKDIR /node_test
 
 RUN  npm install 
 
-EXPOSE 3000
+# should be the same as the port in the app.js
+EXPOSE 3000 
 ENTRYPOINT [ "nodemon", "-L", "app.js"] 
