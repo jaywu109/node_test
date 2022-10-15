@@ -69,7 +69,7 @@ Note:
 EXPOSE 3000  # should be the same as the port in the app.js
 
 /app.js
-const PORT = process.env.PORT || 3000 // shoud set this same as the one in docker image
+const PORT = process.env.PORT || 3000 // shoud set this same as the one in dockerfile
 ```
 
 References:
