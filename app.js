@@ -3,10 +3,12 @@ const morgan = require('morgan');
 
 // express app
 const app = express();
+const PORT = process.env.PORT || 3000
 
 // listen for requests
-app.listen(3000, '0.0.0.0');
-
+app.listen(PORT, () => {
+  console.log(`Server is running on port: ${PORT})`);
+});
 // register view engine
 app.set('view engine', 'ejs');
 
